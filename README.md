@@ -1,6 +1,9 @@
 # BlockDigger
 
-![image](https://github.com/user-attachments/assets/34939465-4369-4cff-bda0-f9d8983ccceb)
+![image](https://github.com/user-attachments/assets/df3cb64e-0f3a-44c1-9b2b-929f4c615bda)
+![image](https://github.com/user-attachments/assets/db406e1b-62f6-4d49-9701-98f7cc91edef)
+
+
 
 A very simple framework made with raw sockets and OpenGL for a multiplayer blocks mining game.
 It's a good starting point for further customization and enhancements. 
@@ -20,5 +23,6 @@ Should compile on anything having GLUT/GL
 # Enhancements
 Thousands, but this code is kept to minimum to allow customizing it's simple form
 
-![image](https://github.com/user-attachments/assets/7f921dda-1927-4873-b164-dd97d9880e45)
+![image](https://github.com/user-attachments/assets/b0bb4573-78a6-4d07-badf-e21a72dd05ec)
+
 
