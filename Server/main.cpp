@@ -79,6 +79,7 @@ void broadcast(const std::string& message, int except_socket = -1) {
             send_to_player(pair.first, message);
         }
     } 
+    printf("%s\n", message.data());
 }
 
 bool is_nick_taken(const std::string& nick) {
@@ -91,7 +92,6 @@ void remove_player(int player_socket) {
         if (!nick.empty()) {
             nicks.erase(nick);
             broadcast("LEAVE " + nick + "\n");
-            // Print player leaving message
             std::cout << "Player left: " << nick << std::endl;
         }
         players.erase(player_socket);
@@ -177,6 +177,7 @@ void process_message(int client_socket, const std::string& message) {
                     if(it->dig_count>0)
                     {
                         it->dig_count--;
+                        broadcast(message+"\n");
                     }
                     else
                     {
@@ -204,8 +205,10 @@ void process_message(int client_socket, const std::string& message) {
             } else {
                 send_to_player(client_socket, "Invalid MSG command.\n");
             }
-        } else if (command == "QUIT") {
+        } else if (command == "QUIT") {           
+
             remove_player(client_socket);
+
         } else {
             send_to_player(client_socket, "Unknown command.\n");
         }
